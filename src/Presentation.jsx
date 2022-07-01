@@ -20,8 +20,15 @@ import {
   MarkdownSlide,
   MarkdownSlideSet,
   Notes,
-  SlideLayout
+  SlideLayout,
 } from 'spectacle';
+
+import Home from './slides/Home';
+import DesignVariety from './slides/DesignVariety';
+import BigCalendarPage from './slides/BigCalendarPage';
+import CSSVariety from './slides/CSSVariety';
+import Meme from './slides/Meme';
+import HeadlessUI from './slides/HeadlessUI';
 
 const formidableLogo =
   'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
@@ -30,8 +37,8 @@ const formidableLogo =
 const theme = {
   fonts: {
     header: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
-    text: '"Open Sans Condensed", Helvetica, Arial, sans-serif'
-  }
+    text: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
+  },
 };
 // SPECTACLE_CLI_THEME_END
 
@@ -72,6 +79,14 @@ const SlideFragments = () => (
 
 const Presentation = () => (
   <Deck theme={theme} template={template}>
+    <Home />
+    <DesignVariety />
+    <BigCalendarPage />
+    <CSSVariety />
+    <Meme />
+    <HeadlessUI />
+
+    {/* sample slides */}
     <Slide>
       <FlexBox height="100%">
         <SpectacleLogo size={500} />
@@ -101,16 +116,16 @@ const Presentation = () => (
       transition={{
         from: {
           transform: 'scale(0.5) rotate(45deg)',
-          opacity: 0
+          opacity: 0,
         },
         enter: {
           transform: 'scale(1) rotate(0)',
-          opacity: 1
+          opacity: 1,
         },
         leave: {
           transform: 'scale(0.2) rotate(315deg)',
-          opacity: 0
-        }
+          opacity: 0,
+        },
       }}
       backgroundColor="tertiary"
       backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/main/src/beau.jpg?raw=true)"
@@ -270,30 +285,3 @@ const Presentation = () => (
 );
 
 export default Presentation;
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
