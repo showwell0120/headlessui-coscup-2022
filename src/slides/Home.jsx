@@ -4,7 +4,7 @@ const Home = () => (
   <Slide>
     <FlexBox height="100%" flexDirection="column">
       <Heading margin="0px" fontSize="96px">
-        ✨<i>從 react-table 初探 Headless UI</i> ✨
+        ✨<i>Dive into Headless UI with react-table</i> ✨
       </Heading>
       <Heading margin="0px" color="primary" fontSize="48px">
         COSCUP 2022 | 帶您讀源碼

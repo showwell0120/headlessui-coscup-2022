@@ -67,9 +67,11 @@ const CSSVariety = () => (
     }
     left={
       <>
-        <Heading fontSize={60}>CSS 開發的流派</Heading>
+        <Heading fontSize={48}>
+          The STYLING way is a matter of life-and-death
+        </Heading>
         <UnorderedList>
-          <ListItem fontSize={32}>😐 Scratch from CSS</ListItem>
+          <ListItem fontSize={32}>😐 Scratch from CSS3</ListItem>
           <ListItem fontSize={32}>😃 pre-processor：SASS</ListItem>
           <ListItem fontSize={32}>😵 post-processor：PostCSS</ListItem>
           <ListItem fontSize={32}>😵 CSS-in-JS：styled-components</ListItem>

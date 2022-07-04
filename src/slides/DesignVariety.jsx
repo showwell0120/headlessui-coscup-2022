@@ -1,4 +1,4 @@
-import { Slide, Heading, Notes, Stepper } from 'spectacle';
+import { Slide, Heading, Notes, Stepper, Image } from 'spectacle';
 
 import Design1 from '../images/calendar-design-1.png';
 import Design2 from '../images/calendar-design-2.jpeg';
@@ -6,7 +6,7 @@ import Design2 from '../images/calendar-design-2.jpeg';
 const DesignVariety = () => (
   <Slide>
     <Heading margin="0px" color="primary" fontSize="48px">
-      Designer 的設計稿
+      Fancy Mockups
     </Heading>
     <Stepper
       tagName="div"
@@ -16,11 +16,7 @@ const DesignVariety = () => (
     >
       {(value, step, isActive) =>
         isActive ? (
-          <img
-            alt={`${step}. login form design`}
-            src={value}
-            style={{ width: '50vw' }}
-          />
+          <Image alt={`${step}. login form design`} src={value} width="60%" />
         ) : null
       }
     </Stepper>

@@ -1,10 +1,14 @@
-import { Slide, FlexBox } from 'spectacle';
-import Image from '../images/meme.png';
+import { Slide, FlexBox, Heading, Image } from 'spectacle';
 
-const Meme = () => (
+const Meme = ({ source, title }) => (
   <Slide>
+    {title && (
+      <Heading margin="0px" color="primary" fontSize="48px">
+        {title}
+      </Heading>
+    )}
     <FlexBox height="100%">
-      <img alt="meme" src={Image} width="60%" />
+      <Image alt="meme" src={source} width="65%" />
     </FlexBox>
   </Slide>
 );

@@ -29,6 +29,10 @@ import BigCalendarPage from './slides/BigCalendarPage';
 import CSSVariety from './slides/CSSVariety';
 import Meme from './slides/Meme';
 import HeadlessUI from './slides/HeadlessUI';
+import Profile from './slides/Profile';
+
+import Meme1 from './images/meme.png';
+import Meme2 from './images/meme-2.png';
 
 const formidableLogo =
   'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
@@ -80,11 +84,13 @@ const SlideFragments = () => (
 const Presentation = () => (
   <Deck theme={theme} template={template}>
     <Home />
-    <DesignVariety />
+    <Meme source={Meme2} title="Our Stakeholders Want ..." />
     <BigCalendarPage />
+    <DesignVariety />
     <CSSVariety />
-    <Meme />
+    <Meme source={Meme1} />
     <HeadlessUI />
+    <Profile />
 
     {/* sample slides */}
     <Slide>
