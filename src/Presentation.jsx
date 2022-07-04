@@ -76,7 +76,6 @@ const Presentation = () => (
         </Link>
       </FlexBox>
     </Slide>
-    {/* <Meme source={QRCode} title="Thanks for your attention 👋" /> */}
     <Slide>
       <FlexBox height="100%" flexDirection={'column'}>
         <Heading margin="0px" fontSize="64px" color="primary">
