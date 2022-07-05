@@ -21,6 +21,8 @@ import HeadlessUI from './slides/HeadlessUI';
 import Profile from './slides/Profile';
 import ECMABook from './slides/ECMABook';
 import Migo from './slides/Migo';
+import NoHeadlessCoinFlip1 from './slides/NoHeadlessCoinFlip1';
+import NoHeadlessCoinFlip2 from './slides/NoHeadlessCoinFlip2';
 
 import Meme1 from './images/meme.png';
 import Meme2 from './images/meme-2.png';
@@ -62,6 +64,9 @@ const Presentation = () => (
     <CSSVariety />
     <Meme source={Meme1} />
     <HeadlessUI />
+    <NoHeadlessCoinFlip1 />
+    <NoHeadlessCoinFlip2 />
+
     <Profile />
     <ECMABook />
     <Migo />

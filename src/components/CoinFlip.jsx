@@ -1,5 +1,12 @@
+// article - https://www.merrickchristensen.com/articles/headless-user-interface-components
+
+import { Text, FlexBox } from 'spectacle';
+
 import React from 'react';
 import Probability from './Probability';
+
+import HeadsCoin from '../images/coin-heads.png';
+import TailsCoin from '../images/coin-tail.png';
 
 const flip = () => ({
   flipResults: Math.random(),
@@ -7,42 +14,82 @@ const flip = () => ({
 
 // Before Headless
 
-const CoinFlipV0 = () =>
+export const CoinFlipV0 = () =>
   Math.random() < 0.5 ? <div>Heads</div> : <div>Tails</div>;
 
-const CoinFlipV1 = () =>
+export const CoinFlipV1 = () =>
   Math.random() < 0.5 ? (
     <div>
-      <img src="/heads.svg" alt="Heads" />
+      <img src={HeadsCoin} alt="Heads" />
     </div>
   ) : (
     <div>
-      <img src="/tails.svg" alt="Tails" />
+      <img src={TailsCoin} alt="Tails" />
     </div>
   );
 
-const CoinFlipV2 = (
+export const CoinFlipV2 = (
   // We'll default to false to avoid breaking the applications
   // current usage.
   { showLabels = false }
 ) =>
   Math.random() < 0.5 ? (
     <div>
-      <img src="/heads.svg" alt="Heads" />
+      <img src={HeadsCoin} alt="Heads" />
 
       {/* Add these labels for the marketing site. */}
       {showLabels && <span>Heads</span>}
     </div>
   ) : (
     <div>
-      <img src="/tails.svg" alt="Tails" />
+      <img src={TailsCoin} alt="Tails" />
 
       {/* Add these labels for the marketing site. */}
       {showLabels && <span>Tails</span>}
     </div>
   );
 
-class CoinFlipV3 extends React.Component {
+export const CoinFlipV3 = ({ showLabels = false, showButton = false }) => {
+  const [state, setState] = React.useState(flip());
+
+  const handleClick = () => setState(flip());
+
+  return (
+    <FlexBox>
+      {showButton && (
+        <button
+          onClick={handleClick}
+          style={{ width: 120, height: 64, fontSize: 30, marginRight: 120 }}
+        >
+          Reflip
+        </button>
+      )}
+      {state.flipResults < 0.5 ? (
+        <FlexBox>
+          <img src={HeadsCoin} alt="Heads" width={72} />
+          {showLabels && (
+            <Text fontSize={30}>
+              Heads &nbsp;
+              <span style={{ fontSize: 16 }}>({state.flipResults})</span>
+            </Text>
+          )}
+        </FlexBox>
+      ) : (
+        <FlexBox>
+          <img src={TailsCoin} alt="Tails" width={72} />
+          {showLabels && (
+            <Text fontSize={30}>
+              Tails &nbsp;
+              <span style={{ fontSize: 16 }}>({state.flipResults})</span>
+            </Text>
+          )}
+        </FlexBox>
+      )}
+    </FlexBox>
+  );
+};
+
+export class _CoinFlipV3 extends React.Component {
   static defaultProps = {
     showLabels: false,
     // We don't repurpose `showLabels`, we aren't animals, after all.
@@ -64,12 +111,12 @@ class CoinFlipV3 extends React.Component {
         )}
         {this.state.flipResults < 0.5 ? (
           <div>
-            <img src="/heads.svg" alt="Heads" />
+            <img src={HeadsCoin} alt="Heads" />
             {this.props.showLabels && <span>Heads</span>}
           </div>
         ) : (
           <div>
-            <img src="/tails.svg" alt="Tails" />
+            <img src={TailsCoin} alt="Tails" />
             {this.props.showLabels && <span>Tails</span>}
           </div>
         )}
