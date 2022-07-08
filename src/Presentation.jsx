@@ -21,6 +21,8 @@ import HeadlessUI from './slides/HeadlessUI';
 import Profile from './slides/Profile';
 import ECMABook from './slides/ECMABook';
 import Migo from './slides/Migo';
+import Migo1 from './slides/Migo1';
+
 import NoHeadlessCoinFlip1 from './slides/NoHeadlessCoinFlip1';
 import NoHeadlessCoinFlip2 from './slides/NoHeadlessCoinFlip2';
 
@@ -70,6 +72,7 @@ const Presentation = () => (
     <Profile />
     <ECMABook />
     <Migo />
+    <Migo1 />
 
     <Slide>
       <FlexBox height="100%" flexDirection={'column'}>
