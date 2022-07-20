@@ -1,6 +1,13 @@
-import Probability from './Probability';
+import { Slide, CodePane, FlexBox } from 'spectacle';
 
-const RollDice = () => (
+const HeadlessCoinFlip3 = () => (
+  <Slide>
+    <FlexBox height="100%">
+      <CodePane language="jsx">
+        {`
+// Now we can implement <RollDice /> in a easy way!
+
+export const RollDice = () => (
   // Six Sided Dice
   <Probability threshold={1 / 6}>
     {({ rerun, result }) => (
@@ -17,5 +24,10 @@ const RollDice = () => (
     )}
   </Probability>
 );
+`}
+      </CodePane>
+    </FlexBox>
+  </Slide>
+);
 
-export default RollDice;
+export default HeadlessCoinFlip3;

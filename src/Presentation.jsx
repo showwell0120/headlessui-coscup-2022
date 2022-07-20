@@ -22,12 +22,23 @@ import Profile from './slides/Profile';
 import ECMABook from './slides/ECMABook';
 import Migo from './slides/Migo';
 import Migo1 from './slides/Migo1';
-
 import NoHeadlessCoinFlip1 from './slides/NoHeadlessCoinFlip1';
 import NoHeadlessCoinFlip2 from './slides/NoHeadlessCoinFlip2';
+import CoinFlip from './slides/CoinFlip';
+import HeadlessCoinFlip1 from './slides/HeadlessCoinFlip1';
+import HeadlessCoinFlip2 from './slides/HeadlessCoinFlip2';
+import HeadlessCoinFlip3 from './slides/HeadlessCoinFlip3';
+import HeadlessCoinFlip4 from './slides/HeadlessCoinFlip4';
+import ReactHooks from './slides/ReactHooks';
+import ReactTable1 from './slides/ReactTable1';
+import ReactTable2 from './slides/ReactTable2';
+import ReactTable3 from './slides/ReactTable3';
 
 import Meme1 from './images/meme.png';
 import Meme2 from './images/meme-2.png';
+import Meme3 from './images/meme-3.png';
+import Meme4 from './images/meme-4.png';
+import Meme5 from './images/meme-5.png';
 import QRCode from './images/qrcode.png';
 
 // SPECTACLE_CLI_THEME_START
@@ -66,8 +77,20 @@ const Presentation = () => (
     <CSSVariety />
     <Meme source={Meme1} />
     <HeadlessUI />
+    <CoinFlip />
     <NoHeadlessCoinFlip1 />
     <NoHeadlessCoinFlip2 />
+    <Meme source={Meme3} />
+    <Meme source={Meme4} width="45%" />
+    <Meme source={Meme5} width="40%" />
+    <HeadlessCoinFlip1 />
+    <HeadlessCoinFlip2 />
+    <HeadlessCoinFlip3 />
+    <HeadlessCoinFlip4 />
+    <ReactHooks />
+    <ReactTable1 />
+    <ReactTable2 />
+    <ReactTable3 />
 
     <Profile />
     <ECMABook />
@@ -79,7 +102,10 @@ const Presentation = () => (
         <Heading margin="0px" fontSize="64px">
           This slide is made by
         </Heading>
-        <Link href="https://formidable.com/open-source/spectacle/">
+        <Link
+          target="_blank"
+          href="https://formidable.com/open-source/spectacle/"
+        >
           <SpectacleLogo size={360} />
         </Link>
       </FlexBox>

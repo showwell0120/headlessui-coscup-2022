@@ -38,13 +38,19 @@ const ECMABook = () => (
         </div>
       </FlexBox>
       <FlexBox>
-        <Link href="https://www.tenlong.com.tw/products/9789864349197">
+        <Link
+          target="_blank"
+          href="https://www.tenlong.com.tw/products/9789864349197"
+        >
           <Text fontSize={24}>📚 天瓏 (Tenlog)</Text>
         </Link>
-        <Link href="https://www.books.com.tw/products/0010907980">
+        <Link
+          target="_blank"
+          href="https://www.books.com.tw/products/0010907980"
+        >
           <Text fontSize={24}>📚 博客來 (Books)</Text>
         </Link>
-        <Link href="https://readmoo.com/book/210214657000101">
+        <Link target="_blank" href="https://readmoo.com/book/210214657000101">
           <Text fontSize={24}>📚 讀墨 (Readmoo)</Text>
         </Link>
       </FlexBox>

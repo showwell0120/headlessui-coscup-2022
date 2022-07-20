@@ -4,7 +4,21 @@ const run = () => ({
   random: Math.random(),
 });
 
-class Probability extends React.Component {
+export const Probability = ({ children, threshold }) => {
+  const [state, setState] = React.useState(run());
+
+  const handleChange = () => setState(run());
+
+  return children({
+    rerun: handleChange,
+
+    // By taking in a threshold property we can support
+    // different odds!
+    result: state.random < threshold,
+  });
+};
+
+class _Probability extends React.Component {
   state = run();
 
   handleClick = () => {

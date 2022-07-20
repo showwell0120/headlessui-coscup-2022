@@ -127,7 +127,46 @@ export class _CoinFlipV3 extends React.Component {
 
 // Enter Headless
 
-export class CoinFlipV4 extends React.Component {
+export const CoinFlipLogic = ({ children }) => {
+  const [state, setState] = React.useState(flip());
+
+  const handleClick = () => setState(flip());
+
+  return children({
+    rerun: handleClick,
+    isHeads: state.flipResults < 0.5,
+  });
+};
+
+export const CoinFlipV4 = ({ showLabels = false, showButton = false }) => (
+  <CoinFlipLogic>
+    {({ rerun, isHeads }) => (
+      <FlexBox>
+        {showButton && (
+          <button
+            onClick={rerun}
+            style={{ width: 120, height: 64, fontSize: 30, marginRight: 120 }}
+          >
+            Reflip
+          </button>
+        )}
+        {isHeads ? (
+          <FlexBox>
+            <img src={HeadsCoin} alt="Heads" width={72} />
+            {showLabels && <Text fontSize={30}>Heads</Text>}
+          </FlexBox>
+        ) : (
+          <FlexBox>
+            <img src={TailsCoin} alt="Tails" width={72} />
+            {showLabels && <Text fontSize={30}>Tails</Text>}
+          </FlexBox>
+        )}
+      </FlexBox>
+    )}
+  </CoinFlipLogic>
+);
+
+export class _CoinFlipV4 extends React.Component {
   state = flip();
 
   handleClick = () => {

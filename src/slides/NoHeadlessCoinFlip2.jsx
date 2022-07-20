@@ -1,10 +1,5 @@
 import { Slide, CodePane, Box } from 'spectacle';
-import {
-  CoinFlipV0,
-  CoinFlipV1,
-  CoinFlipV2,
-  CoinFlipV3,
-} from '../components/CoinFlip';
+import { CoinFlipV3 } from '../components/CoinFlip';
 
 const NoHeadlessCoinFlip2 = () => (
   <Slide>
