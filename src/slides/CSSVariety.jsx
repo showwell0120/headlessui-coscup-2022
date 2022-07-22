@@ -67,17 +67,15 @@ const CSSVariety = () => (
     }
     left={
       <>
-        <Heading fontSize={48}>
-          The STYLING way is a matter of life-and-death
-        </Heading>
+        <Heading fontSize={60}>Styling way</Heading>
         <UnorderedList>
-          <ListItem fontSize={32}>😐 Scratch from CSS3</ListItem>
-          <ListItem fontSize={32}>😃 pre-processor：SASS</ListItem>
-          <ListItem fontSize={32}>😵 post-processor：PostCSS</ListItem>
+          <ListItem fontSize={36}>😐 Scratch from CSS3</ListItem>
+          <ListItem fontSize={36}>😃 pre-processor：SASS</ListItem>
+          <ListItem fontSize={36}>😵 post-processor：PostCSS</ListItem>
           <ListItem fontSize={32}>😵 CSS-in-JS：styled-components</ListItem>
-          <ListItem fontSize={32}>😵 Utility-first：Tailwind CSS</ListItem>
-          <ListItem fontSize={32}>😵 UI library：Material UI</ListItem>
-          <ListItem fontSize={32}>... ...</ListItem>
+          <ListItem fontSize={36}>😵 Utility-first：Tailwind CSS</ListItem>
+          <ListItem fontSize={36}>😵 UI library：Material UI</ListItem>
+          <ListItem fontSize={36}>... ...</ListItem>
         </UnorderedList>
       </>
     }

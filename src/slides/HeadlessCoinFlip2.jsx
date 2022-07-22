@@ -12,7 +12,6 @@ export const CoinFlipV4 = ({ showLabels = false, showButton = false }) => (
     {({ rerun, isHeads }) => (
       <>
         {showButton && <button onClick={rerun}>Reflip</button>}
-        <button onClick={rerun}>Reflip</button>
         {isHeads ? (
           <div>
             <img src={HeadsCoin} alt="Heads" />

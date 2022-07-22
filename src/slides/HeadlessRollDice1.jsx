@@ -1,13 +1,13 @@
 import { Slide, CodePane, FlexBox } from 'spectacle';
 
-const HeadlessCoinFlip3 = () => (
+const HeadlessRollDice1 = () => (
   <Slide>
     <FlexBox height="100%">
       <CodePane language="jsx">
         {`
 // Now we can implement <RollDice /> in a easy way!
 
-export const RollDice = () => (
+export const RollDiceV1 = () => (
   // Six Sided Dice
   <Probability threshold={1 / 6}>
     {({ rerun, result }) => (
@@ -30,4 +30,4 @@ export const RollDice = () => (
   </Slide>
 );
 
-export default HeadlessCoinFlip3;
+export default HeadlessRollDice1;

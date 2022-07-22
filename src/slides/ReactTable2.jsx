@@ -9,12 +9,13 @@ const ReactTable2 = () => (
           language="jsx"
           highlightRanges={[
             [1, 12],
-            379,
-            [366, 375],
-            [320, 364],
-            [280, 316],
-            [26, 29],
-            [14, 19],
+            390,
+            [377, 386],
+            [334, 339],
+            [351, 362],
+            291,
+            [310, 314],
+            [270, 281],
           ]}
         >
           {`
@@ -216,6 +217,17 @@ export const useTable = (props, ...plugins) => {
   }, [allColumns, visibleColumns]);
   getInstance().allColumns = allColumns;
 
+  if (process.env.NODE_ENV !== 'production') {
+    const duplicateColumns = allColumns.filter((column, i) => {
+      return allColumns.findIndex((d) => d.id === column.id) !== i;
+    });
+
+    if (duplicateColumns.length) {
+      console.info(allColumns);
+      throw new Error('...');
+    }
+  }
+
   // Make the headerGroups
   const headerGroups = React.useMemo(
     () =>
@@ -265,7 +277,7 @@ export const useTable = (props, ...plugins) => {
     [visibleColumns, visibleColumnsDep]
   );
   getInstance().visibleColumns = visibleColumns;
-  
+
   // Header Visibility is needed by this point
   const [totalColumnsMinWidth, totalColumnsWidth, totalColumnsMaxWidth] =
     calculateHeaderWidths(headers);

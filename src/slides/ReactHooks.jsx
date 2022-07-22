@@ -14,8 +14,8 @@ const ReactHooks = () => (
         >
           <strong style={{ color: 'yellow' }}>Hooks</strong>
         </Link>{' '}
-        are a new addition in React 16.8. They let you use state and other React
-        features without writing a class.
+        are a new addition in React 16.8(February, 2019). They let you use state
+        and other React features without writing a class.
       </Quote>
       <Quote>
         Building your own Hooks lets you{' '}

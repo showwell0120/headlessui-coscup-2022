@@ -3,7 +3,7 @@
 import { Text, FlexBox } from 'spectacle';
 
 import React from 'react';
-import Probability from './Probability';
+import { Probability } from './Probability';
 
 import HeadsCoin from '../images/coin-heads.png';
 import TailsCoin from '../images/coin-tail.png';

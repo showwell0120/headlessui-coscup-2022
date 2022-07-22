@@ -1,6 +1,15 @@
-import Probability from './Probability';
+import { Probability, useProbability } from './Probability';
 
-const RollDice = () => (
+export const RollDiceV2 = () => {
+  const { rerun, result } = useProbability({ threshold: 1 / 6 });
+
+  <div>
+    <span onMouseOver={rerun}>Roll the dice!</span>
+    {result ? <div>Big winner!</div> : <div>You win some, you lose most.</div>}
+  </div>;
+};
+
+export const RollDiceV1 = () => (
   // Six Sided Dice
   <Probability threshold={1 / 6}>
     {({ rerun, result }) => (
@@ -17,5 +26,3 @@ const RollDice = () => (
     )}
   </Probability>
 );
-
-export default RollDice;

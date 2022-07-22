@@ -18,6 +18,17 @@ export const Probability = ({ children, threshold }) => {
   });
 };
 
+export const useProbability = ({ threshold }) => {
+  const [state, setState] = React.useState(run());
+
+  const handleChange = () => setState(run());
+
+  return {
+    rerun: handleChange,
+    result: state.random < threshold,
+  };
+};
+
 class _Probability extends React.Component {
   state = run();
 
@@ -35,5 +46,3 @@ class _Probability extends React.Component {
     });
   }
 }
-
-export default Probability;

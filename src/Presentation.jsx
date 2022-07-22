@@ -15,6 +15,8 @@ import {
 import Home from './slides/Home';
 import DesignVariety from './slides/DesignVariety';
 import BigCalendarPage from './slides/BigCalendarPage';
+import BigCalendarPage1 from './slides/BigCalendarPage1';
+
 import CSSVariety from './slides/CSSVariety';
 import Meme from './slides/Meme';
 import HeadlessUI from './slides/HeadlessUI';
@@ -27,12 +29,15 @@ import NoHeadlessCoinFlip2 from './slides/NoHeadlessCoinFlip2';
 import CoinFlip from './slides/CoinFlip';
 import HeadlessCoinFlip1 from './slides/HeadlessCoinFlip1';
 import HeadlessCoinFlip2 from './slides/HeadlessCoinFlip2';
-import HeadlessCoinFlip3 from './slides/HeadlessCoinFlip3';
-import HeadlessCoinFlip4 from './slides/HeadlessCoinFlip4';
+import HeadlessProbability from './slides/HeadlessProbability';
+import HeadlessRollDice1 from './slides/HeadlessRollDice1';
+import HeadlessRollDice2 from './slides/HeadlessRollDice2';
+import HeadlessLink from './slides/HeadlessLink';
 import ReactHooks from './slides/ReactHooks';
 import ReactTable1 from './slides/ReactTable1';
 import ReactTable2 from './slides/ReactTable2';
-import ReactTable3 from './slides/ReactTable3';
+import ReactTableExample from './slides/ReactTableExample';
+import ReactTableV8 from './slides/ReactTableV8';
 
 import Meme1 from './images/meme.png';
 import Meme2 from './images/meme-2.png';
@@ -74,6 +79,7 @@ const Presentation = () => (
     <Meme source={Meme2} title="Our Stakeholders Want ..." />
     <BigCalendarPage />
     <DesignVariety />
+    <BigCalendarPage1 />
     <CSSVariety />
     <Meme source={Meme1} />
     <HeadlessUI />
@@ -85,12 +91,15 @@ const Presentation = () => (
     <Meme source={Meme5} width="40%" />
     <HeadlessCoinFlip1 />
     <HeadlessCoinFlip2 />
-    <HeadlessCoinFlip3 />
-    <HeadlessCoinFlip4 />
+    <HeadlessProbability />
+    <HeadlessRollDice1 />
+    <HeadlessLink />
     <ReactHooks />
+    <HeadlessRollDice2 />
     <ReactTable1 />
+    <ReactTableExample />
     <ReactTable2 />
-    <ReactTable3 />
+    <ReactTableV8 />
 
     <Profile />
     <ECMABook />
