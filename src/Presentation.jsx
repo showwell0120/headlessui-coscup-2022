@@ -38,6 +38,8 @@ import ReactTable1 from './slides/ReactTable1';
 import ReactTable2 from './slides/ReactTable2';
 import ReactTableExample from './slides/ReactTableExample';
 import ReactTableV8 from './slides/ReactTableV8';
+import DiceRoll from './slides/DiceRoll';
+import Conclusion from './slides/Conclusion';
 
 import Meme1 from './images/meme.png';
 import Meme2 from './images/meme-2.png';
@@ -87,6 +89,7 @@ const Presentation = () => (
     <NoHeadlessCoinFlip1 />
     <NoHeadlessCoinFlip2 />
     <Meme source={Meme3} />
+    <DiceRoll />
     <Meme source={Meme4} width="45%" />
     <Meme source={Meme5} width="40%" />
     <HeadlessCoinFlip1 />
@@ -100,7 +103,7 @@ const Presentation = () => (
     <ReactTableExample />
     <ReactTable2 />
     <ReactTableV8 />
-
+    <Conclusion />
     <Profile />
     <ECMABook />
     <Migo />
