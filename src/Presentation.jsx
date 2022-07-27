@@ -105,23 +105,9 @@ const Presentation = () => (
     <ReactTableV8 />
     <Conclusion />
     <Profile />
-    <ECMABook />
     <Migo />
     <Migo1 />
-
-    <Slide>
-      <FlexBox height="100%" flexDirection={'column'}>
-        <Heading margin="0px" fontSize="64px">
-          This slide is made by
-        </Heading>
-        <Link
-          target="_blank"
-          href="https://formidable.com/open-source/spectacle/"
-        >
-          <SpectacleLogo size={360} />
-        </Link>
-      </FlexBox>
-    </Slide>
+    <ECMABook />
     <Slide>
       <FlexBox height="100%" flexDirection={'column'}>
         <Heading margin="0px" fontSize="64px" color="primary">

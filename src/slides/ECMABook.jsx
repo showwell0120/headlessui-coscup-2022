@@ -14,7 +14,7 @@ import BookCover from '../images/book.png';
 const ECMABook = () => (
   <Slide>
     <FlexBox flexDirection="column" justifyContent="center" alignItems="center">
-      <Heading fontSize={64}>ECMAScript 關鍵 30 天</Heading>
+      <Heading fontSize={64}>{`<ECMAScript 關鍵 30 天>`}</Heading>
       <FlexBox>
         <Image width={300} src={BookCover} />
         <div>
